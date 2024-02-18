@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.workautoapplication.presentation.AutoViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_brand"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_brand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/brand"
+                android:inputType="textCapWords"
+                android:text="@{viewModel.autoItem.brand}"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_model"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_brand"
+        app:layout_constraintVertical_chainStyle="packed"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_model"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/model"
+            android:inputType="textCapWords"
+            android:text="@{viewModel.autoItem.model}"/>
+     </com.google.android.material.textfield.TextInputLayout>
+
+     <com.google.android.material.textfield.TextInputLayout
+         android:id="@+id/til_price"
+         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="4dp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@id/til_model"
+         app:layout_constraintVertical_chainStyle="packed"
+         >
+
+         <com.google.android.material.textfield.TextInputEditText
+             android:id="@+id/et_price"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:hint="@string/price"
+             android:inputType="textCapWords"
+             android:text="@{String.valueOf(viewModel.autoItem.price)}"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/save_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">WorkAutoApplication</string>
+    <string name="brand">Марка авто\n</string>
+    <string name="model">Модель авто\n\t</string>
+    <string name="price">Цена авто\n</string>
+    <string name="save_btn">добавить авто</string>
+    <string name="add_auto_item_content_description">Добавить авто</string>
+    <string name="option_1">по цене</string>
+    <string name="option_2">по марке</string>
+    <string name="option_3">по модели</string>
+</resources>

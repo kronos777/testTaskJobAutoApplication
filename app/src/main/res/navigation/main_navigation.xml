@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation.xml"
+    app:startDestination="@id/autoItemListFragment">
+
+    <fragment
+        android:id="@+id/autoItemListFragment"
+        android:name="com.example.workautoapplication.presentation.AutoItemListFragment"
+        android:label="AutoItemListFragment" >
+        <action
+            android:id="@+id/action_autoItemListFragment_to_autoItemFragment"
+            app:destination="@id/autoItemFragment" >
+
+            <argument
+                android:name="id"
+                app:argType="integer"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/autoItemFragment"
+        android:name="com.example.workautoapplication.presentation.AutoItemFragment"
+        android:label="AutoItemFragment" >
+
+        <argument
+            android:name="id"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </fragment>
+</navigation>
